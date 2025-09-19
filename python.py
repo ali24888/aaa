@@ -1,43 +1,19 @@
-# Создание массива строк с разными значениями
-string_list = ["Hello", "World", "Python", "Programming", "Language"]
+# Работа со списками и стеком в Python
 
-# Вывод элементов
-print("=== МАССИВ СТРОК ===")
-print("Элементы:", string_list)
-print("Размер:", len(string_list))
-print("Первый элемент:", string_list[0])
-print("Последний элемент:", string_list[-1])
+# Создание списка (массива)
+arr = [1, 2, 3, 4, 5]
+print("Список:", arr)
 
-# Добавление новых элементов
-string_list.append("New")
-string_list.append("Elements")
+# Добавление элемента
+arr.append(6)
+print("После добавления:", arr)
 
-print("\nПосле добавления:", string_list)
-
-
-# Используем список как стек
+# Использование списка как стека (LIFO)
 stack = []
+stack.append(10)
+stack.append(20)
+stack.append(30)
+print("Стек:", stack)
 
-print("Добавляем элементы в стек...")
-stack.append("Первый")
-print("Добавлен:", stack[-1])
-
-stack.append("Второй")
-print("Добавлен:", stack[-1])
-
-stack.append("Третий")
-print("Добавлен:", stack[-1])
-
-# Информация о стеке
-print("\nРазмер стека:", len(stack))
-print("Верхний элемент:", stack[-1])
-
-# Извлечение из стека
-print("\nИзвлекаем элементы...")
-while stack:
-    top_element = stack.pop()
-    print("Извлекаем:", top_element)
-    if stack:
-        print("Новый верхний:", stack[-1])
-    else:
-        print("Стек пуст!")
+stack.pop()
+print("После pop:", stack)
